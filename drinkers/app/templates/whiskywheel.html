@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+<label for="exampleColorInput" class="form-label">Color picker</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="The whisky color">
+
+<!--nose-->
+
+<!--palate-->
+
+
+<select class="form-select" aria-label="Default select example">
+  <option selected>How long is the finish</option>
+  <option value="1">Very short</option>
+  <option value="2">Short</option>
+  <option value="3">Medium</option>
+  <option value="4">Long</option>
+  <option value="5">Very long</option>
+</select>
+{% endblock %}

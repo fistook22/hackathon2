@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+{% for dist in distillery %}
+{% for name in names %}
+{% name %}
+{% dist %}
+{% endfor %}
+{% endfor %}
+{% endblock %}
