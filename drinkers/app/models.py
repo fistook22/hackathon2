@@ -1,6 +1,5 @@
-from sqlalchemy.orm import validates
-
 from app import db
+from sqlalchemy.orm import validates
 
 
 class Drinker(db.Model):
@@ -27,4 +26,4 @@ class TheDrink(db.Model):
     # palate = db.Column(db.List[''])
     finish = db.Column(db.String(32))
 
-    drinker = db.Column(db.String(64), db.ForeignKey('drinker.drinker_id'))
+    drinker = db.Column(db.Integer, db.ForeignKey('drinker.drinker_id'))

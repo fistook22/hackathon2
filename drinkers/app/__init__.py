@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import random
 
+
 # Flask Object
 app = Flask(__name__)
 app.config['SECRET_KEY'] = random._urandom(56)
@@ -15,7 +16,8 @@ db_info = {'host': 'localhost',
            'user': 'postgres',
            'port': ''}
 app.config[
-    'SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_info['user']}:{db_info['psw']}@{db_info['host']}/{db_info['database']}"
+    'SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_info['user']}:{db_info['psw']}@{db_info['host']}/" \
+                                 f"{db_info['database']}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Database Representation
