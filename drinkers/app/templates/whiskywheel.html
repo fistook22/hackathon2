@@ -1,66 +1,54 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% block content %}
+<form class="form form-horizontal" method="post" role="form">
+        {{ form.hidden_tag() }}
 
-{% block my_block %}
-<form>
-<label for="exampleColorInput" class="form-label">What is the color of the whisky your drinking?</label>
-<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="The whisky color"><br>
-<label for="exampleColorInput" class="form-label">Nose: smell your whisky and rate his flavours:</label><br>
-<div class="btn-group-vertical">
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-  </div>
-  <div class="btn-group mr-2" role="group" aria-label="Second group">
-     <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-  </div>
-  <div class="btn-group" role="group" aria-label="Third group">
-     <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-  </div>
-</div>
-</div>
-<br>
-  <label for="exampleColorInput" class="form-label">Palate: take a sip or two and rate the whisky flavours:</label><br>
-<div class="btn-group-vertical">
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-  </div>
-  <div class="btn-group mr-2" role="group" aria-label="Second group">
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-    <button type="button" class="btn btn-secondary">7</button>
-    <button type="button" class="btn btn-secondary">7</button>
-  </div>
-  <div class="btn-group" role="group" aria-label="Third group">
-       <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-    <button type="button" class="btn btn-secondary">7</button>
-    <button type="button" class="btn btn-secondary">7</button>
-  </div>
-</div>
-</div>
+        {{ form.distillery.label }}
+        {{ form.distillery(size=32) }}
+        <br>
+        {{ form.name.label }}
+        {{ form.name(size=32) }}
+        <br>
+        <label for="exampleColorInput" class="form-label">What is the color of the whisky your drinking?</label>
+        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="The whisky color">
+        <br>
+        <button class="btn btn-primary">
+            {{ form.submit() }}
+        </button>
 
-<br>
-<br>
-<select class="form-select" aria-label="Default select example">
-  <option selected>How long is the finish</option>
-  <option value="1">Very short</option>
-  <option value="2">Short</option>
-  <option value="3">Medium</option>
-  <option value="4">Long</option>
-  <option value="5">Very long</option>
-</select>
-  </form>
+</form>
 {% endblock %}
+
+
+
+
+<!--{% block my_block %}-->
+<!--<form>-->
+<!--<label for="exampleColorInput" class="form-label">What is the color of the whisky your drinking?</label>-->
+<!--<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="The whisky color"><br>-->
+
+<!--<select class="form-select" aria-label="Default select example">-->
+<!--  <option selected>How long is the finish</option>-->
+<!--  <option value="1">Very short</option>-->
+<!--  <option value="2">Short</option>-->
+<!--  <option value="3">Medium</option>-->
+<!--  <option value="4">Long</option>-->
+<!--  <option value="5">Very long</option>-->
+<!--</select>-->
+<!--  </form>-->
+<!--{% endblock %}-->
+
+<!--<form method="POST">-->
+<!--        {{ form.hidden_tag() }}-->
+
+<!--        {{ form.distillery.label }}-->
+<!--        {{ form.distillery(size=32) }}-->
+<!--        <br>-->
+<!--        {{ form.name.label }}-->
+<!--        {{ form.name(size=32) }}-->
+<!--        <br>-->
+<!--        <button class="btn btn-primary">-->
+<!--            {{ form.submit() }}-->
+<!--        </button>-->
+
+<!--    </form>-->

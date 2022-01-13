@@ -9,12 +9,12 @@ class Drinker(db.Model):
     country = db.Column(db.String(64))
     gender = db.Column(db.String(2))
 
-    drinks = db.relationship('Drinker', backref='drinker', lazy='dynamic')
+    drinks = db.relationship('TheDrink', backref='thedrink', lazy='dynamic')
 
-    @validates('gender')
-    def validate_gender(self, key, gender):
-        if gender not in ['M', 'F']:
-            raise Exception(f'the gender {gender} must be "M" or "F"')
+    # @validates('gender')
+    # def validate_gender(self, key, gender):
+    #     if gender not in ['M', 'F']:
+    #         raise Exception(f'the gender {gender} must be "M" or "F"')
 
 
 class TheDrink(db.Model):
@@ -26,4 +26,4 @@ class TheDrink(db.Model):
     # palate = db.Column(db.List[''])
     finish = db.Column(db.String(32))
 
-    drinker = db.Column(db.Integer, db.ForeignKey('drinker.drinker_id'))
+    person = db.Column(db.Integer, db.ForeignKey('drinker.drinker_id'))
