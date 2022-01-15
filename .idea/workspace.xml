@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="86a1a42a-200e-4da5-b624-48ee76c94eef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/drinkers/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/adddrinker.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/adddrinker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/dataview.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/dataview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/notforu.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/notforu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/app/templates/whiskywheel.html" beforeDir="false" afterPath="$PROJECT_DIR$/drinkers/app/templates/taste.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drinkers/migrations/versions/381652e35a87_.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23h61p69dLgI0QDttLdiKxud6lA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86a1a42a-200e-4da5-b624-48ee76c94eef" name="Changes" comment="" />
+      <created>1642173766384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642173766384</updated>
+    </task>
+    <servers />
+  </component>
+</project>

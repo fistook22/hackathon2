@@ -14,5 +14,17 @@
   </div>
 {% endblock %}
 {% block my_block %}
-<h1>This app was not made for you! please come again when you are allowed to have a drink.</h1>
+
+    <form method="POST" class="fixed-bottom gap-2 col-6 mx-auto">
+        {{ form.hidden_tag() }}
+
+        {{ form.age.label }}
+        {{ form.age(size=32) }}
+        <br>
+        <button class="btn btn-primary">
+            {{ form.submit() }}
+        </button>
+
+    </form>
+
 {% endblock %}

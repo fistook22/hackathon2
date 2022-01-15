@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 381652e35a87
+Revision ID: a3ec234f219c
 Revises: 
-Create Date: 2022-01-13 21:08:45.747045
+Create Date: 2022-01-15 20:32:40.555189
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '381652e35a87'
+revision = 'a3ec234f219c'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -29,11 +29,13 @@ def upgrade():
     op.create_table('the_drink',
     sa.Column('drink_id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('distillery', sa.String(length=64), nullable=True),
-    sa.Column('name', sa.String(length=64), nullable=True),
+    sa.Column('edition', sa.String(length=64), nullable=True),
     sa.Column('color', sa.String(length=32), nullable=True),
+    sa.Column('nose', sa.String(length=32), nullable=True),
+    sa.Column('palate', sa.String(length=32), nullable=True),
     sa.Column('finish', sa.String(length=32), nullable=True),
-    sa.Column('drinker', sa.Integer(), nullable=True),
-    sa.ForeignKeyConstraint(['drinker'], ['drinker.drinker_id'], ),
+    sa.Column('person', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['person'], ['drinker.drinker_id'], ),
     sa.PrimaryKeyConstraint('drink_id')
     )
     # ### end Alembic commands ###

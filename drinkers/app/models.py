@@ -9,7 +9,7 @@ class Drinker(db.Model):
     country = db.Column(db.String(64))
     gender = db.Column(db.String(2))
 
-    drinks = db.relationship('TheDrink', backref='thedrink', lazy='dynamic')
+    drinks = db.relationship('TheDrink', backref='drinker', lazy='dynamic')
 
     # @validates('gender')
     # def validate_gender(self, key, gender):
@@ -20,10 +20,10 @@ class Drinker(db.Model):
 class TheDrink(db.Model):
     drink_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     distillery = db.Column(db.String(64))
-    name = db.Column(db.String(64))
+    edition = db.Column(db.String(64))
     color = db.Column(db.String(32))
-    # nose = db.Column(db.List[''])
-    # palate = db.Column(db.List[''])
+    nose = db.Column(db.String(32))
+    palate = db.Column(db.String(32))
     finish = db.Column(db.String(32))
 
     person = db.Column(db.Integer, db.ForeignKey('drinker.drinker_id'))

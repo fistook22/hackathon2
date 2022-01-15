@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+    <form method="POST" class="fixed-bottom" role="form">
+        {{ form.hidden_tag() }}
+
+        {{ form.distillery.label }}
+        {{ form.distillery(size=30) }}
+        <br>
+        {{ form.edition.label }}
+        {{ form.edition(size=30) }}
+        <br>
+        {{ form.color.label }}
+        {{ form.color(size=30) }}
+        <br>
+        {{ form.nose.label }}
+        {{ form.nose(size=1) }}
+        <br>
+        {{ form.palate.label }}
+        {{ form.palate(size=1) }}
+        <br>
+        {{ form.finish.label }}
+        {{ form.finish(size=1) }}
+        <br>
+        <button class="btn btn-primary">
+            {{ form.submit() }}
+        </button>
+
+    </form>
+
+{% endblock %}
+
