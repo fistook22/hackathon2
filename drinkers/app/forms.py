@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField, RadioField, SelectMultipleField, SelectField
+from wtforms import StringField, SubmitField, IntegerField, RadioField, SelectField, IntegerRangeField
 from wtforms.validators import data_required, NumberRange
 
 
@@ -19,7 +19,7 @@ class AddDrinker(FlaskForm):
 class AddDrink(FlaskForm):
     distillery = StringField('Distillery', validators=[data_required()])
     edition = StringField('Edition', validators=[data_required()])
-    color = StringField('Color', default=None)
+    color = IntegerRangeField('Color', default=None)
     nose = SelectField('Nose',
                                choices=[("Elegant & Floral", "Elegant & Floral"), ("Fresh Fruit & Vanilla", "Fresh Fruit & Vanilla"), ("Dried Fruit & Nut", "Dried Fruit & Nut"),
                                         ("Malt & Honey", "Malt & Honey"), ("Rich Fruit & Spice", "Rich Fruit & Spice"), ("Peat & Fruit", "Peat & Fruit"),

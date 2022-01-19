@@ -19,12 +19,12 @@ def notforu():
 
 @app.route('/add_drinker', methods=['GET', 'POST'])
 def add_drinker():
-    form = AddDrinker()
-    if form.validate_on_submit():
-        name = form.name.data
-        age = form.age.data
-        country = form.country.data
-        gender = form.gender.data
+    form_drinker = AddDrinker()
+    if form_drinker.validate_on_submit():
+        name = form_drinker.name.data
+        age = form_drinker.age.data
+        country = form_drinker.country.data
+        gender = form_drinker.gender.data
         drinker = Drinker(name=name, age=age, country=country, gender=gender)
 
         db.session.add(drinker)
@@ -32,27 +32,27 @@ def add_drinker():
         db.session.commit()
 
         return redirect("/taste")
-    return render_template("adddrinker.html", form=form)
+    return render_template("adddrinker.html", form=form_drinker)
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = Login()
+    form_login = Login()
     if form.validate_on_submit():
         return redirect("/add_drinker")
-    return render_template("login.html", form=form)
+    return render_template("login.html", form=form_login)
 
 
 @app.route('/taste', methods=['GET', 'POST'])
 def tasting():
-    form = AddDrink()
-    if form.validate_on_submit():
-        distillery = form.distillery.data
-        edition = form.edition.data
-        color = form.color.data
-        nose = form.nose.data
-        palate = form.palate.data
-        finish = form.finish.data
+    form_drink = AddDrink()
+    if form_drink.validate_on_submit():
+        distillery = form_drink.distillery.data
+        edition = form_drink.edition.data
+        color = form_drink.color.data
+        nose = form_drink.nose.data
+        palate = form_drink.palate.data
+        finish = form_drink.finish.data
 
         if edition not in [edition for edition in TheDrink.query.all()]:
             drink = TheDrink(distillery=distillery, edition=edition, color=color, nose=nose, palate=palate, finish=finish)
@@ -60,7 +60,7 @@ def tasting():
             db.session.commit()
 
         return redirect("/history")
-    return render_template("taste.html", form=form)
+    return render_template("taste.html", form=form_drink)
 
 
 @app.route('/statistics', methods=['GET', 'POST'])

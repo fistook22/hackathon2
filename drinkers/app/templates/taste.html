@@ -5,27 +5,26 @@
     <form method="POST" class="fixed-bottom" role="form">
         {{ form.hidden_tag() }}
 
-        {{ form.distillery.label }}
-        {{ form.distillery(size=30) }}
+        {{ form.distillery.label(class="form-label") }}
+        {{ form.distillery(class="form-control-sm") }}
         <br>
-        {{ form.edition.label }}
-        {{ form.edition(size=30) }}
+        {{ form.edition.label(class="form-label") }}
+        {{ form.edition(class="form-control-sm") }}
         <br>
-        {{ form.color.label }}
-        {{ form.color(size=30) }}
+        {{ form.color.label(class="form-label") }}
+        {{ form.color(class="form-control-sm") }}
         <br>
-        {{ form.nose.label }}
-        {{ form.nose(size=1) }}
+        {{ form.nose.label(class="form-label") }}
+        {{ form.nose(class="form-control-sm") }}
         <br>
-        {{ form.palate.label }}
-        {{ form.palate(size=1) }}
+        {{ form.palate.label(class="form-label") }}
+        {{ form.palate(class="form-control-sm") }}
         <br>
-        {{ form.finish.label }}
-        {{ form.finish(size=1) }}
+        {{ form.finish.label(class="form-label") }}
+        {{ form.finish(class="form-control-sm") }}
         <br>
-        <button class="btn btn-primary">
-            {{ form.submit() }}
-        </button>
+            {{ form.submit(class="btn btn-secondary") }}
+
 
     </form>
 

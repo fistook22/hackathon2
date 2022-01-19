@@ -2,12 +2,15 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import random
-
+from flask_bootstrap import Bootstrap
 
 # Flask Object
 app = Flask(__name__)
 app.config['SECRET_KEY'] = random._urandom(56)
 app.config['DEBUG'] = True
+
+# Flask_Bootstrap
+Bootstrap(app)
 
 # Database Connection
 db_info = {'host': 'localhost',
@@ -23,6 +26,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Database Representation
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
 
 from app import models, routes

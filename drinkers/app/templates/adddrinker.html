@@ -5,21 +5,19 @@
     <form method="POST" class="fixed-bottom" role="form">
         {{ form.hidden_tag() }}
 
-        {{ form.name.label }}
-        {{ form.name(size=32) }}
+        {{ form.name.label(class="form-label") }}
+        {{ form.name(class="form-control-sm") }}
         <br>
-        {{ form.age.label }}
-        {{ form.age(size=32) }}
+        {{ form.age.label(class="form-label") }}
+        {{ form.age(class="form-control-sm") }}
         <br>
-        {{ form.country.label }}
-        {{ form.country(size=32) }}
+        {{ form.country.label(class="form-label") }}
+        {{ form.country(class="form-control-sm") }}
         <br>
-        {{ form.gender.label }}
-        {{ form.gender }}
+        {{ form.gender.label(class="form-label") }}
+        {{ form.gender(class="form-control-sm") }}
         <br>
-        <button class="btn btn-primary">
-            {{ form.submit() }}
-        </button>
+        {{ form.submit(class="btn btn-secondary") }}
 
     </form>
 

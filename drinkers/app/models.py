@@ -21,7 +21,7 @@ class TheDrink(db.Model):
     drink_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     distillery = db.Column(db.String(64))
     edition = db.Column(db.String(64))
-    color = db.Column(db.String(32))
+    color = db.Column(db.Integer)
     nose = db.Column(db.String(32))
     palate = db.Column(db.String(32))
     finish = db.Column(db.String(32))
